@@ -46,16 +46,21 @@
 > python37 + pytorch1.3
 ##### （4）数据集：
 > Movielen的small数据集（下载链接https://grouplens.org/datasets/movielens/）
-使用的rating.csv文件。数据集按照8:2的比例进行划分，随机挑选80%的数据当做训练集，剩余的20%当做测试集。  
+使用的rating.csv文件。数据集按照8:2的比例进行划分，随机挑选80%的数据当做训练集，剩余的20%当做测试集。 
+
 > 从数据集中选取的特征包括：userId , movieId , lastmovie , rating     
+
 > lastmovie数据的构造过程为：将数据集按照userId进行排序，在对于每一个用户按照时间戳进行排序，找出对应于某个电影的上一个电影的movieId。
 ##### （5）代码结构：
-> 进行数据预处理以及数据划分的代码在divideData.py文件中，划分之后得到rating_train.csv与rating_test.csv两个文件。（data文件夹下的ratings.csv为原始数据集，其中会得到一些中间文件：ratings_sort.csv文件为按照useId以及timestamp对数据集排序后得到的文件；rating_addLastMovie.csv文件为增加用户看的上一部电影的movieId得到文件；ratingsNoHead.csv文件为去掉数据集的表头得到的文件。）   
+> 进行数据预处理以及数据划分的代码在divideData.py文件中，划分之后得到rating_train.csv与rating_test.csv两个文件。（data文件夹下的ratings.csv为原始数据集，其中会得到一些中间文件：ratings_sort.csv文件为按照useId以及timestamp对数据集排序后得到的文件；rating_addLastMovie.csv文件为增加用户看的上一部电影的movieId得到文件；ratingsNoHead.csv文件为去掉数据集的表头得到的文件。） 
+
 > fm_model.py文件是读取训练集以及测试集，并使用pytorch框架编写FM训练模型，最后使用rmse作为评价指标，使用测试集对模型进行测试。模型训练过程中采用batch对数据集进行分批训练，同时每训练完一轮之后使用测试集进行测试，检验测试效果，并最终以曲线的形式展现出来。最终训练集与测试集的曲线图如下图所示：
 
 ##### （6）参数的调节：
 > ①特征因子k的选取：在test_loss_for_k.py文件中含有绘制loss与k的关系图的代码，通过观察曲线的走向，选取合适的k值（前提是要先将loss与对应的k的数据存储存储到csv文件中，对应为data文件夹下的test_loss.csv文件）    
-> ②学习率的选取，同样在test_loss_for_k.py文件中含有绘制loss与学习率的关系图的代码，通过观察曲线的走向，选取合适的lr值。（同样应该将loss与学习率lr的对应曲线存储到csv文件中，对应于data文件夹下的test_loss_for_lr.csv文件）   
+
+> ②学习率的选取，同样在test_loss_for_k.py文件中含有绘制loss与学习率的关系图的代码，通过观察曲线的走向，选取合适的lr值。（同样应该将loss与学习率lr的对应曲线存储到csv文件中，对应于data文件夹下的test_loss_for_lr.csv文件）  
+
 > 同样的训练次数、正则化次数也是通过这种方法进行选取。
 ##### （7）评价标准：
 > 采用rmse作为评价指标，使用测试集对模型进行测试。（实验只使用了数据集中的一部分数据，同样也使用了完整的数据集进行了测试，测试误差为1.2。由于数据集较大，这里只上传使用的部分数据集。）
