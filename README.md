@@ -55,7 +55,7 @@
 > 进行数据预处理以及数据划分的代码在divideData.py文件中，划分之后得到rating_train.csv与rating_test.csv两个文件。（data文件夹下的ratings.csv为原始数据集，其中会得到一些中间文件：ratings_sort.csv文件为按照useId以及timestamp对数据集排序后得到的文件；rating_addLastMovie.csv文件为增加用户看的上一部电影的movieId得到文件；ratingsNoHead.csv文件为去掉数据集的表头得到的文件。） 
 
 > fm_model.py文件是读取训练集以及测试集，并使用pytorch框架编写FM训练模型，最后使用rmse作为评价指标，使用测试集对模型进行测试。模型训练过程中采用batch对数据集进行分批训练，同时每训练完一轮之后使用测试集进行测试，检验测试效果，并最终以曲线的形式展现出来。最终训练集与测试集的曲线图如下图所示：
-
+![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/fm.png)
 ##### （6）参数的调节：
 > ①特征因子k的选取：在test_loss_for_k.py文件中含有绘制loss与k的关系图的代码，通过观察曲线的走向，选取合适的k值（前提是要先将loss与对应的k的数据存储存储到csv文件中，对应为data文件夹下的test_loss.csv文件）    
 
@@ -156,7 +156,7 @@
 >	f1、mrr
 ##### 8、训练过程中：
 >	每训练5个epoch，会使用测试集对模型进行测试，并且会画出一张训练集和测试集基于每个epoch的mrr对比图，便于查看模型的训练情况
-
+![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/GRURec.png)
 
 #### meta-path:
 ##### (1)实验主要任务：
@@ -176,4 +176,5 @@
 用户80%的数据作为训练集，20%的数据作为测试集。
 ##### (7)评价标准：
 > 评价标准为rmse
+![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/matepath.jpg)
 
