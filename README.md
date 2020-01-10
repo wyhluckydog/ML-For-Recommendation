@@ -98,9 +98,13 @@
 > torch1.3
 ##### (4)代码结构：
 > 对数据集进行预处理，按照字段合并为一个数据文件dataset    
-> 文件夹utils中的split_train.py用于对dataset进行按比例划分，生成训练集和测试集     
-> 文件夹utils中的data_preprocess.py对数据集进行预处理，提取连续特征和分类特征，生成category_emb.csv      
-> DeepFM.py是包含了DeepFM的模型代码     
+
+> 文件夹utils中的split_train.py用于对dataset进行按比例划分，生成训练集和测试集
+
+> 文件夹utils中的data_preprocess.py对数据集进行预处理，提取连续特征和分类特征，生成category_emb.csv     
+
+> DeepFM.py是包含了DeepFM的模型代码  
+
 > main.py为主程序，调用DeepFM模型进行训练
 ##### (5)参数：
 > 训练epoch=300,学习率learning-rate=0.003,embedding-size=32,optimizer选用Adam
@@ -136,11 +140,17 @@
 >	本实验的超参数主要是在论文提出的超参数的基础上进行的微调，如若需要修改超参数，在main.py中的main函数中可以进行修改
 ##### 6、数据集：
 > 数据集使用到的是论文中使用的RecSys Challenge 2015的数据集yoochoose-click。(https://2015.recsyschallenge.com/)    
+
 > 数据集的处理：
+
 > 该数据集提供 会话id（用户id）、用户与商品交互的时间、商品id 信息。    
+
 > 其中测试集是所有交互时间最晚的一个交互记录的前24小时内的有交互记录的用户的所有交互记录。（也就是说把最后一个交互记录前一天内有交互记录的用户的所有交互记录取出）    
+
 > 训练集是除去测试集后所有的用户交互记录     
-> 并且需要去掉不足2个交互记录的会话对应的交互记录，去掉不足5个交互记录的商品对应的交互记录     
+
+> 并且需要去掉不足2个交互记录的会话对应的交互记录，去掉不足5个交互记录的商品对应的交互记录   
+
 > 该处理过程在preprocess.py中完成
 ##### 7、评价标准：
 >	f1、mrr
@@ -162,7 +172,8 @@
 ##### (5)超参数的选择
 > 在main.py中设定参数
 ##### (6)数据集：
-> 数据集MovieLens + IMDb（下载链接https://grouplens.org/datasets/hetrec-2011/，下载的数据集为：hetrec2011-movielens-2k-v2.zip），用户80%的数据作为训练集，20%的数据作为测试集。
+> 数据集MovieLens + IMDb（下载链接https://grouplens.org/datasets/hetrec-2011/，下载的数据集为：hetrec2011-movielens-2k-v2.zip），
+用户80%的数据作为训练集，20%的数据作为测试集。
 ##### (7)评价标准：
 > 评价标准为rmse
 
