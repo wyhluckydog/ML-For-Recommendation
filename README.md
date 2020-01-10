@@ -156,6 +156,7 @@
 >	f1、mrr
 ##### 8、训练过程中：
 >	每训练5个epoch，会使用测试集对模型进行测试，并且会画出一张训练集和测试集基于每个epoch的mrr对比图，便于查看模型的训练情况
+
 ![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/GRURec.png)
 
 #### meta-path:
