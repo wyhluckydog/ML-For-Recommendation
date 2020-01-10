@@ -1,0 +1,35 @@
+1、实验主要任务：
+	该实验为GRU4Rec论文复现实验，主要是对于用户消费商品的时序推荐。通过用户之前购买的商品记录，进行下一可能购买商品的推荐。
+2、参考论文：
+	《Session-based Recommendations with Recurrent Neural Networks》ICLR 2016
+3、环境部署：
+	python版本3.7
+	pytorch版本为1.3.0
+	cudatoolkit=10.1
+4、代码结构：
+	GRU4REC
+		--lib
+			--__init__.py
+			--dataset.py
+			--evaluation.py
+			--lossfunction.py
+			--metric.py
+			--model.py
+			--optimizer.py
+			--trainer.py
+		--main.py
+		--preprocessing.py
+5、关于超参数的选择问题：
+	本实验的超参数主要是在论文提出的超参数的基础上进行的微调，如若需要修改超参数，在main.py中的main函数中可以进行修改
+6、数据集：
+	数据集使用到的是论文中使用的RecSys Challenge 2015的数据集yoochoose-click。(https://2015.recsyschallenge.com/)
+	数据集的处理：
+		该数据集提供 会话id（用户id）、用户与商品交互的时间、商品id 信息。
+		其中测试集是所有交互时间最晚的一个交互记录的前24小时内的有交互记录的用户的所有交互记录。（也就是说把最后一个交互记录前一天内有交互记录的用户的所有交互记录取出）
+		训练集是除去测试集后所有的用户交互记录
+		并且需要去掉不足2个交互记录的会话对应的交互记录，去掉不足5个交互记录的商品对应的交互记录
+		该处理过程在preprocess.py中完成
+7、评价标准：
+	f1、mrr
+8、训练过程中：
+	每训练5个epoch，会使用测试集对模型进行测试，并且会画出一张训练集和测试集基于每个epoch的mrr对比图，便于查看模型的训练情况

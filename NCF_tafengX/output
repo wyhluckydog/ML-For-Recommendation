@@ -1,0 +1,8 @@
+nohup: ignoring input
+MLP start!
+Datasetloader load_rating_file_as_matrix finished!
+Datasetloader load_rating_file_as_list finished!
+Datasetloader load_negative_file finished!
+DatasetLoader __init__ finished!
+DatasetLoader get_train_loader finished!
+load Data finished!

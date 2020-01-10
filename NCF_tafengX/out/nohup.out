@@ -1,0 +1,9 @@
+MLP start!
+Traceback (most recent call last):
+  File "../MLP.py", line 88, in <module>
+    datasetloader = DatasetLoder(mlp_config['path'])
+  File "/home/user01/xxl/NCF_tafengX/Dataset.py", line 17, in __init__
+    self.trainMatrix = self.load_rating_file_as_matrix(path + ".train.rating")
+  File "/home/user01/xxl/NCF_tafengX/Dataset.py", line 65, in load_rating_file_as_matrix
+    with open(filename, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Data/tafeng.train.rating'

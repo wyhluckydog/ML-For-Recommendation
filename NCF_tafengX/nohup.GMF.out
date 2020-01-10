@@ -1,0 +1,30 @@
+start!
+Datasetloader load_rating_file_as_matrix finished!
+Datasetloader load_rating_file_as_list finished!
+Datasetloader load_negative_file finished!
+DatasetLoader __init__ finished!
+usernum: 32266
+itemnum: 23812
+DatasetLoader get_train_loader finished!
+load Data finished!
+Iteration 0 [1058.8 s]: HR = 0.1015, NDCG = 0.0461, loss = 0.3543 [62.7 s]
+Iteration 1 [885.3 s]: HR = 0.1039, NDCG = 0.0470, loss = 0.2325 [58.6 s]
+Iteration 2 [936.8 s]: HR = 0.1015, NDCG = 0.0465, loss = 0.1275 [61.7 s]
+Iteration 3 [1063.5 s]: HR = 0.1017, NDCG = 0.0461, loss = 0.1001 [65.3 s]
+Iteration 4 [1040.4 s]: HR = 0.1013, NDCG = 0.0460, loss = 0.0132 [65.5 s]
+Iteration 5 [1045.9 s]: HR = 0.1001, NDCG = 0.0457, loss = 0.0069 [65.1 s]
+Iteration 6 [1067.8 s]: HR = 0.1018, NDCG = 0.0459, loss = 0.0003 [65.6 s]
+Iteration 7 [1076.2 s]: HR = 0.1007, NDCG = 0.0459, loss = 0.0000 [65.0 s]
+Iteration 8 [1843.1 s]: HR = 0.1015, NDCG = 0.0464, loss = 0.0000 [274.0 s]
+Iteration 9 [2218.4 s]: HR = 0.1013, NDCG = 0.0462, loss = 0.0000 [266.1 s]
+Iteration 10 [1871.0 s]: HR = 0.1017, NDCG = 0.0464, loss = 0.0000 [283.4 s]
+Iteration 11 [1850.0 s]: HR = 0.1014, NDCG = 0.0463, loss = 0.0000 [267.1 s]
+Iteration 12 [1889.3 s]: HR = 0.1014, NDCG = 0.0463, loss = 0.0000 [269.5 s]
+Iteration 13 [1795.7 s]: HR = 0.1014, NDCG = 0.0463, loss = 0.0000 [64.6 s]
+Iteration 14 [1314.8 s]: HR = 0.1014, NDCG = 0.0463, loss = 0.0000 [74.8 s]
+Iteration 15 [1447.1 s]: HR = 0.1014, NDCG = 0.0463, loss = 0.0000 [75.5 s]
+Iteration 16 [1424.5 s]: HR = 0.1015, NDCG = 0.0463, loss = 0.0000 [80.7 s]
+Iteration 17 [1399.9 s]: HR = 0.1015, NDCG = 0.0463, loss = 0.0000 [74.6 s]
+Iteration 18 [1413.3 s]: HR = 0.1015, NDCG = 0.0463, loss = 0.0000 [76.5 s]
+Iteration 19 [1445.9 s]: HR = 0.1016, NDCG = 0.0463, loss = 0.0000 [75.2 s]
+End. Best Iteration 1:  HR = 0.1039, NDCG = 0.0470. 

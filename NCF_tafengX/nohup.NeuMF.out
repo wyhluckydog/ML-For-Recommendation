@@ -1,0 +1,31 @@
+nohup: ignoring input
+NeuMF start!
+Datasetloader load_rating_file_as_matrix finished!
+Datasetloader load_rating_file_as_list finished!
+Datasetloader load_negative_file finished!
+DatasetLoader __init__ finished!
+DatasetLoader get_train_loader finished!
+load Data finished!
+/usr/local/lib/python3.5/dist-packages/torch/serialization.py:425: SourceChangeWarning: source code of class 'GMF.GMFModel' has changed. you can retrieve the original source code by accessing the object's source attribute or set `torch.nn.Module.dump_patches = True` and use the patch tool to revert the changes.
+  warnings.warn(msg, SourceChangeWarning)
+Iteration 0 [1096.4 s]: HR = 0.1034, NDCG = 0.0470, loss = 0.3570 [83.4 s]
+Iteration 1 [1047.6 s]: HR = 0.1044, NDCG = 0.0473, loss = 0.2647 [82.6 s]
+Iteration 2 [990.6 s]: HR = 0.1038, NDCG = 0.0470, loss = 0.3230 [84.6 s]
+Iteration 3 [1060.2 s]: HR = 0.1028, NDCG = 0.0470, loss = 0.3500 [82.0 s]
+Iteration 4 [1036.6 s]: HR = 0.1037, NDCG = 0.0471, loss = 0.3195 [82.6 s]
+Iteration 5 [1111.1 s]: HR = 0.1034, NDCG = 0.0471, loss = 0.2284 [82.7 s]
+Iteration 6 [1150.4 s]: HR = 0.1030, NDCG = 0.0470, loss = 0.2332 [85.0 s]
+Iteration 7 [1156.6 s]: HR = 0.1042, NDCG = 0.0475, loss = 0.2464 [84.9 s]
+Iteration 8 [1162.3 s]: HR = 0.1026, NDCG = 0.0464, loss = 0.2693 [84.4 s]
+Iteration 9 [1155.3 s]: HR = 0.1029, NDCG = 0.0467, loss = 0.2067 [83.1 s]
+Iteration 10 [1183.4 s]: HR = 0.1019, NDCG = 0.0465, loss = 0.2277 [81.9 s]
+Iteration 11 [1176.1 s]: HR = 0.1027, NDCG = 0.0469, loss = 0.1746 [83.6 s]
+Iteration 12 [1169.9 s]: HR = 0.1030, NDCG = 0.0468, loss = 0.1716 [82.9 s]
+Iteration 13 [1193.6 s]: HR = 0.1030, NDCG = 0.0469, loss = 0.2093 [83.3 s]
+Iteration 14 [1177.9 s]: HR = 0.1006, NDCG = 0.0462, loss = 0.1939 [83.0 s]
+Iteration 15 [1156.7 s]: HR = 0.1027, NDCG = 0.0468, loss = 0.1837 [82.6 s]
+Iteration 16 [1170.5 s]: HR = 0.1000, NDCG = 0.0457, loss = 0.1698 [84.7 s]
+Iteration 17 [1159.0 s]: HR = 0.1007, NDCG = 0.0461, loss = 0.1727 [82.5 s]
+Iteration 18 [1167.1 s]: HR = 0.1023, NDCG = 0.0465, loss = 0.1850 [85.4 s]
+Iteration 19 [1187.0 s]: HR = 0.1025, NDCG = 0.0464, loss = 0.2058 [81.7 s]
+End. Best Iteration -1:  HR = 0.5061, NDCG = 0.2957. 
