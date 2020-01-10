@@ -81,10 +81,10 @@
 >   MLP.py	多层感知机模型的实现
 >    NeuMF.py	MF+MLP的结合模型实现
 ##### 5. 数据集
->    使用tafeng数据集。
->    （1） 将tafeng数据集中的CUSTOMER_ID和PRODUCT_ID映射到0-n（n为用户数）和0-m（m为商品数）之间。
->    （2） 然后将数据集转换成论文使用的格式
->    （3） 将处理后的数据随机分成训练集，验证集和测试集（根据论文中的验证集每个用户只有1条），并使用随机负采样。
+>    使用tafeng数据集。     
+> （1） 将tafeng数据集中的CUSTOMER_ID和PRODUCT_ID映射到0-n（n为用户数）和0-m（m为商品数）之间。    
+> （2） 然后将数据集转换成论文使用的格式    
+> （3） 将处理后的数据随机分成训练集，验证集和测试集（根据论文中的验证集每个用户只有1条），并使用随机负采样。
 ##### 6. 评价标准
 >   Hit Ratio、NDGC
 
@@ -94,7 +94,7 @@
 ##### (2)对应参考的论文为：
 > “DeepFM:A Factorization-Machine based Neural Network for CTR Prediction”
 ##### (3)部署环境：
-> python3.7
+> python3.7    
 > torch1.3
 ##### (4)代码结构：
 > 对数据集进行预处理，按照字段合并为一个数据文件dataset    
@@ -172,7 +172,7 @@
 ##### (5)超参数的选择
 > 在main.py中设定参数
 ##### (6)数据集：
-> 数据集MovieLens + IMDb（下载链接https://grouplens.org/datasets/hetrec-2011/，下载的数据集为：hetrec2011-movielens-2k-v2.zip），
+> 数据集MovieLens + IMDb（下载链接https://grouplens.org/datasets/hetrec-2011/)下载的数据集为：hetrec2011-movielens-2k-v2.zip，
 用户80%的数据作为训练集，20%的数据作为测试集。
 ##### (7)评价标准：
 > 评价标准为rmse
