@@ -12,7 +12,7 @@
 ##### （5）代码结构：
 > load_rating_data(file_path) 读取数据集并划分训练集和测试集
 > class mf() 对user和item分别构造隐藏层m*p和n*p并做矩阵乘法并与已有评分做误差，最小化误差优化。
-
+![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/MF.png)
 ##### （6）参数的调节：
 > 特征因子数目的选取：100
 > 习率的选取：0.01
