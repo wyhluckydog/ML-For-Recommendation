@@ -176,5 +176,6 @@
 用户80%的数据作为训练集，20%的数据作为测试集。
 ##### (7)评价标准：
 > 评价标准为rmse
+
 ![](https://github.com/wyhluckydog/ML-For-Recommendation/blob/master/IMG/matepath.jpg)
 
